@@ -13,8 +13,8 @@ import pandas as pd
 setlocale(LC_NUMERIC, 'English_US')
 
 curDay = time.strftime("%Y%m%d")
-curDay = "20181109"
-temp = "https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/chi/csm/DailyStat/data_tab_daily_20181115c.js"
+#curDay = "20181109"
+temp = "https://sc.hkex.com.hk/TuniS/www.hkex.com.hk/chi/csm/DailyStat/data_tab_daily_"+curDay+"c.js"
 ret_data = requests.get(temp)
 json_data = ret_data.text.encode('utf-8').split("=")[1]
 json_dict = json.loads(json_data)
